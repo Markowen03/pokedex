@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>PokéDex</title>
+  <link rel="icon" type="image/png" href="Pokeball.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <audio id="bgMusic" src="music/pokemon.mp3" loop></audio>
+
+  <button id="playMusicBtn" onclick="playMusic()">
+  <img src="pokeball.png" alt="pokeball" style="width:20px; height:20px; vertical-align:middle; margin-right:5px;">
+  Play Music
+</button>
+
+  <header class="poke_header">
+    <nav class="btn-grid">
+      <a href="#" class="nav-logo">PokéDex</a>
+      <form onsubmit="searchPokemon(event)">
+        <input id="searchInput" type="search" placeholder="Search Pokémon..." autocomplete="off">
+        <button id="searchBtn" type="submit">Search</button>
+      </form>
+    </nav>
+  </header>
+
+  <div id="pokemon-list-container"></div>
+  <div id="result-container"></div>
+
+  <script src="pokedex.js"></script>
+
+  <footer>
+    Powered by <a href="#">PokéAPI</a>  
+    <br>By <a href="">Mark Owen Badua</a>
+  </footer>
+
+</body>
+</html>
